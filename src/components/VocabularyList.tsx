@@ -33,7 +33,7 @@ const VocabularyList = () => {
                             />
                         </div>
                     </div>
-                    <div className="grid grid-cols-3 gap-5">
+                    <div className="grid grid-cols-3 gap-3 mt-2">
                         <VocabularyListItem
                             index={0}
                             word="Volition"
@@ -128,7 +128,7 @@ type VocabularyListItemProps = {
 
 const VocabularyListItem = ({ index, word, pos, pronunciation, definition, example, image }: VocabularyListItemProps) => {
     return (
-        <div className="bg-white p-4 flex flex-col items-center gap-6 shadow-md rounded-2xl border-t-4 border-t-[#037ACA]">
+        <div className="bg-white p-4 flex flex-col items-center gap-6 shadow-md rounded-2xl border-2 border-[#037ACA]/60">
             <div className="w-full flex relative">
                 <div
                     className="size-8 bg-[#037ACA] rounded-full flex justify-center items-center font-semibold text-white -mt-1 absolute"
@@ -143,17 +143,17 @@ const VocabularyListItem = ({ index, word, pos, pronunciation, definition, examp
                 <div className="">
                     <h2 className='capitalize font-[inter] text-[#037ACA] font-bold text-2xl'>{word}</h2>
                     <div className="flex gap-2 items-center mt-1">
-                        <div className='text-base'>({pos})</div>
+                        <div className='text-base font-medium'>({pos})</div>
                         <div className="flex gap-1 text-sm items-center rounded-full px-2 py-0.5 border border-[#037ACA]/30 font-medium">
                             <VolumeFilled className='size-4.5 flex-none' />
                             <span className='text-shadow-sm leading-none'>{pronunciation}</span>
                         </div>
                     </div>
                 </div>
-                <div className="mt-2 font-medium">
+                <div className="mt-3 leading-[130%]">
                     {definition}
                 </div>
-                <div className="mt-3">
+                <div className="mt-5 text-base leading-[130%]">
                     <span className="font-semibold text-[#037ACA]">Example:</span>{" "}
                     <span className='italic'>
                         "{example}"
