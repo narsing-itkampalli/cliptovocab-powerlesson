@@ -1,10 +1,12 @@
 import React from 'react'
+import ScrollText from '../icons/ScrollText';
+import Arrow from '../icons/Arrow';
 
 const Transcript = () => {
     return (
-        <div className="py-6 px-8 text-black">
+        <div className="py-6 px-8 text-black relative z-10">
             <div
-                className="px-8 border-[#a7a7a7] rounded-2xl overflow-hidden py-3 flex flex-col items-center relative"
+                className="px-8 border-[#a7a7a7] rounded-2xl overflow-hidden py-6 flex flex-col items-center relative"
             >
                 <div
                     className="absolute inset-0 z-0 opacity-40"
@@ -16,8 +18,13 @@ const Transcript = () => {
                     }}
                 />
                 <div className="relative pt-1">
-                    <div className="relative inline-block text-3xl font-[Carter_One] leading-none text-[#037ACA] text-center mb-4">
-                        Transcript
+                    <div className="relative inline-block text-3xl font-[Carter_One] text-[#2C3E50] leading-none text-center mb-4">
+                        <div className="flex gap-2 items-center">
+                            <ScrollText
+                                className='text-[#037ACA]'
+                            />
+                            Transcript
+                        </div>
 
                         <span
                             className="absolute left-0 right-0 -bottom-2 h-1.5"
@@ -37,7 +44,6 @@ const Transcript = () => {
                                     highlight: [{ text: 'volition' }]
                                 }}
                                 previousHighlight={0}
-
                             />
                             <TranscriptItem
                                 speaker='Host'
@@ -80,7 +86,7 @@ const Transcript = () => {
                                 previousHighlight={5}
                             />
                             <TranscriptItem
-                                speaker='Abhishek'
+                                speaker='Host'
                                 transcript={{
                                     text: "I've seen, uh, girls in villages say that they have curbed child marriage because of sports.",
                                     highlight: [{ text: 'curbed' }]
@@ -88,7 +94,7 @@ const Transcript = () => {
                                 previousHighlight={6}
                             />
                             <TranscriptItem
-                                speaker='Abhishek'
+                                speaker='Host'
                                 transcript={{
                                     text: "And those were movies that had very closed off, and kind of aggressive men.",
                                     highlight: [{ text: 'closed off' }]
@@ -99,6 +105,12 @@ const Transcript = () => {
                     </table>
                 </div>
             </div>
+            <Arrow
+                className='size-13 absolute -bottom-2 left-30 -translate-x-1/2 -rotate-25'
+                style={{
+                    color: '#213B52',
+                }}
+            />
         </div>
     )
 }
