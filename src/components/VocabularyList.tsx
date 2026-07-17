@@ -8,10 +8,10 @@ const VocabularyList = () => {
                 <div
                     className="absolute inset-0 z-0 opacity-40"
                     style={{
-                        background: "url('/image.png')",
-                        backgroundSize: "cover",
+                        background: "url('/paper.jpg')",
+                        backgroundSize: "contain",
                         backgroundPosition: "left",
-                        backgroundRepeat: "no-repeat",
+                        backgroundRepeat: "repeat",
                     }}
                 />
                 <div className="relative">
@@ -135,7 +135,7 @@ const VocabularyListItem = ({ index, word, pos, pronunciation, definition, examp
                 >
                     {index + 1}
                 </div>
-                <div className="size-24 p-1 bg-[#037ACA]/10 border border-[#037ACA]/20 flex justify-center items-center rounded-full mt-1 mx-auto">
+                <div className="size-24 p-2 bg-[#037ACA]/10 border border-[#037ACA]/20 flex justify-center items-center rounded-full mt-1 mx-auto">
                     <img src={image} alt={word} className='w-full h-auto object-contain' />
                 </div>
             </div>

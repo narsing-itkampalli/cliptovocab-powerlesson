@@ -22,7 +22,7 @@ function App() {
                     <div
                         className="absolute inset-0 z-0 opacity-40"
                         style={{
-                            background: "url('/paper-2.png')",
+                            background: "url('/paper-2.jpg')",
                             backgroundSize: "cover",
                             backgroundPosition: "left",
                             backgroundRepeat: "no-repeat",

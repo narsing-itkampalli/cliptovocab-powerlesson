@@ -52,7 +52,7 @@ type CulturalNotesItemProps = {
 const CulturalNotesItem = ({ heading, subtext, image }: CulturalNotesItemProps) => {
     return (
         <div className="flex gap-4 px-4 py-3 border border-[#0A6441]/20 rounded-2xl">
-            <div className="size-20 flex-none bg-[#0A6441]/10 rounded-2xl flex justify-center items-center">
+            <div className="size-20 p-2 flex-none bg-[#0A6441]/10 rounded-2xl flex justify-center items-center">
                 <img src={image} alt="..." className='size-full object-contain' />
             </div>
             <div>

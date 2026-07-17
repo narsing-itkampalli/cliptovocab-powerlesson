@@ -11,13 +11,13 @@ const Transcript = () => {
                 <div
                     className="absolute inset-0 z-0 opacity-40"
                     style={{
-                        background: "url('/image.png')",
+                        background: "url('/paper.jpg')",
                         backgroundSize: "cover",
-                        backgroundPosition: "left",
+                        backgroundPosition: "center",
                         backgroundRepeat: "no-repeat",
                     }}
                 />
-                <div className="relative pt-1">
+                <div className="relative">
                     <div className="relative inline-block text-3xl font-[Carter_One] text-[#2C3E50] leading-none text-center mb-4">
                         <div className="flex gap-2 items-center">
                             <ScrollText
