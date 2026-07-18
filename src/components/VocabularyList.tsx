@@ -1,7 +1,20 @@
 import VolumeFilled from '../icons/VolumeFilled'
 import Book from '../icons/Book';
 
-const VocabularyList = () => {
+type VocabularyItemData = {
+    word: string;
+    pos: string;
+    pronunciation: string;
+    definition: string;
+    example: string;
+    image: string;
+};
+
+type VocabularyListProps = {
+    data: VocabularyItemData[];
+};
+
+const VocabularyList = ({ data }: VocabularyListProps) => {
     return (
         <div className="px-8 text-lg">
             <div className="px-8 border-[#a7a7a7] rounded-2xl overflow-hidden py-6 flex flex-col items-center relative">
@@ -34,81 +47,23 @@ const VocabularyList = () => {
                         </div>
                     </div>
                     <div className="grid grid-cols-3 gap-3 mt-2">
-                        <VocabularyListItem
-                            index={0}
-                            word="Volition"
-                            pos="noun"
-                            pronunciation="vo-LI-shun"
-                            definition="Ability to make your own decisions and act on them without being forced."
-                            example="She left the company of her own volition, not because she was fired."
-                            image="/word-img/volition.png"
-                        />
-                        <VocabularyListItem
-                            index={1}
-                            word="Facetious"
-                            pos="adjective"
-                            pronunciation="fuh-SEE-shus"
-                            definition="Treating a serious subject in a humorous or joking way."
-                            example="Stop being facetious; this is a very serious meeting."
-                            image="/word-img/facetious.png"
-                        />
-                        <VocabularyListItem
-                            index={2}
-                            word="Estranged"
-                            pos="adjective"
-                            pronunciation="es-TRAYNJd"
-                            definition="No longer close or connected to someone you were once close to."
-                            example="He hasn't spoken to his estranged father in years."
-                            image="/word-img/estranged.png"
-                        />
-                        <VocabularyListItem
-                            index={3}
-                            word="Skewed"
-                            pos="adjective"
-                            pronunciation="skewd"
-                            definition="Not balanced or fair; showing only one side of something."
-                            example="The survey results were skewed because they only asked teenagers."
-                            image="/word-img/skewed.png"
-                        />
-                        <VocabularyListItem
-                            index={4}
-                            word="Daunting"
-                            pos="adjective"
-                            pronunciation="DAWN-ting"
-                            definition="Seeming difficult enough to make you feel nervous or less confident."
-                            example="Moving to a new country can be a daunting prospect."
-                            image="/word-img/daunting.png"
-                        />
-                        <VocabularyListItem
-                            index={5}
-                            word="Butted heads"
-                            pos="idiom"
-                            pronunciation="bu-tid heads"
-                            definition="Argued or disagreed strongly with someone."
-                            example="The marketing manager and the sales director always butt heads over the budget."
-                            image="/word-img/butted_heads.png"
-                        />
+                        {data.slice(0, 6).map((item, index) => (
+                            <VocabularyListItem
+                                key={index}
+                                index={index}
+                                {...item}
+                            />
+                        ))}
                     </div>
                     <div className="hidden print:block col-span-3 break-after-page"></div>
                     <div className="grid grid-cols-3 gap-5 pt-5">
-                        <VocabularyListItem
-                            index={6}
-                            word="Curbed"
-                            pos="verb"
-                            pronunciation="kurbd"
-                            definition="Kept under control or prevented from becoming worse."
-                            example="You need to curb your spending if you want to save for a house."
-                            image="/word-img/curbed.png"
-                        />
-                        <VocabularyListItem
-                            index={7}
-                            word="Closed off"
-                            pos="phrasal verb"
-                            pronunciation="klozd off"
-                            definition="Unwilling to share feelings, thoughts, or personal experiences."
-                            example="After the accident, he became very closed off to his friends."
-                            image="/word-img/closed_off.png"
-                        />
+                        {data.slice(6).map((item, index) => (
+                            <VocabularyListItem
+                                key={index + 6}
+                                index={index + 6}
+                                {...item}
+                            />
+                        ))}
                     </div>
                 </div>
             </div>

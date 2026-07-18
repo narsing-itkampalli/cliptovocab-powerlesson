@@ -1,6 +1,16 @@
 import { Star } from 'lucide-react'
 
-const CulturalNotes = () => {
+type CulturalNotesItemData = {
+    heading: string;
+    subtext: string;
+    image: string;
+};
+
+type CulturalNotesProps = {
+    data: CulturalNotesItemData[];
+};
+
+const CulturalNotes = ({ data }: CulturalNotesProps) => {
     return (
         <div className='border border-[#037ACA] border-dashed rounded-2xl'>
             <div className="flex gap-4 items-center py-3 px-4">
@@ -23,21 +33,12 @@ const CulturalNotes = () => {
                 </div>
             </div>
             <div className="py-3 px-4 grid gap-2">
-                <CulturalNotesItem
-                    heading='"Of my own volition" vs. "My choice"'
-                    subtext='"Volition" is highly formal and emphasizes independent decision-making, not just preference.'
-                    image='/notes/1.png'
-                />
-                <CulturalNotesItem
-                    heading='The Danger of Being "Facetious"'
-                    subtext='Being called as funny is a compliment, but being called "facetious" is usually a criticism. It implies you are making jokes at the wrong time.'
-                    image='/notes/2.png'
-                />
-                <CulturalNotesItem
-                    heading='Visualizing "Butting Heads"'
-                    subtext='This idiom comes from the literal image of two animals (like rams or goats) crashing their horns together. It perfectly shows two people refusing to back down.'
-                    image='/notes/3.png'
-                />
+                {data.map((item, index) => (
+                    <CulturalNotesItem
+                        key={index}
+                        {...item}
+                    />
+                ))}
             </div>
         </div>
     )

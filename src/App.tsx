@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react"
 import CulturalNotes from "./components/CulturalNotes"
 import Header from "./components/Header"
 import PronunciationGuide from "./components/PronunciationGuide"
@@ -7,13 +8,23 @@ import VocabularyList from "./components/VocabularyList"
 
 
 function App() {
+    const [data, setData] = useState<any>(null);
+
+    useEffect(() => {
+        fetch("/data.json")
+            .then(res => res.json())
+            .then(setData)
+            .catch(console.error);
+    }, []);
+
+    if (!data) return <div>Loading...</div>;
 
     return (
         <div>
-            <Header />
+            <Header data={data.header} />
             <div className="">
-                <Transcript />
-                <VocabularyList />
+                <Transcript data={data.transcript} />
+                <VocabularyList data={data.vocabulary} />
             </div>
             <div className="px-8 mt-6">
                 <div
@@ -30,11 +41,11 @@ function App() {
                     />
                     <div className="relative">
                         <div className="grid grid-cols-2 gap-4">
-                            <VisualMemoryHelper />
-                            <PronunciationGuide />
+                            <VisualMemoryHelper data={data.visualMemory} />
+                            <PronunciationGuide data={data.pronunciationGuide} />
                         </div>
                         <div className="pt-4">
-                            <CulturalNotes />
+                            <CulturalNotes data={data.culturalNotes} />
                         </div>
                     </div>
                 </div>

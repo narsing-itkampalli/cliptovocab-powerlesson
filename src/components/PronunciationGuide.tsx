@@ -1,6 +1,16 @@
 import Mic from "../icons/Mic"
 
-const PronunciationGuide = () => {
+type PronunciationGuideItemData = {
+    sentence: string;
+    pronunciation: string;
+    guide: string;
+};
+
+type PronunciationGuideProps = {
+    data: PronunciationGuideItemData[];
+};
+
+const PronunciationGuide = ({ data }: PronunciationGuideProps) => {
     return (
         <div className='border border-dashed border-[#037ACA] rounded-2xl'>
             <div className="flex gap-4 items-center px-4 py-3">
@@ -23,24 +33,13 @@ const PronunciationGuide = () => {
                 </div>
             </div>
             <div className="py-3 px-4 grid gap-2">
-                <PronunciationGuideItem
-                    index={0}
-                    sentence="On my own volition"
-                    pronunciation="on-my-own voh-li-shun"
-                    guide="Notice how the stress is on 'voh' and the 'li' is light."
-                />
-                <PronunciationGuideItem
-                    index={1}
-                    sentence="You're too facetious"
-                    pronunciation="you're-too fuh-see-shus"
-                    guide="The 'a' and 'e' blend into a soft 'uh' and 'ee' sound."
-                />
-                <PronunciationGuideItem
-                    index={3}
-                    sentence="Closed off"
-                    pronunciation="clo-zdofff"
-                    guide="The 'd' in closed links directly into the 'o' of off."
-                />
+                {data.map((item, index) => (
+                    <PronunciationGuideItem
+                        key={index}
+                        index={index}
+                        {...item}
+                    />
+                ))}
             </div>
         </div>
     )

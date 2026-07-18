@@ -1,6 +1,13 @@
 import logoMini from '../assets/logo-mini.png';
 
-const Header = () => {
+type HeaderProps = {
+    data: {
+        chapter: string;
+        image: string;
+    };
+};
+
+const Header = ({ data }: HeaderProps) => {
     return (
         <div className='w-full min-h-16.5 bg-[#C6ECDC] flex items-center justify-between'>
             <div className='pl-12 pt-5 pb-3'>
@@ -26,10 +33,10 @@ const Header = () => {
                 </div>
             </div>
             <div className='w-fit mt-auto relative pr-12'>
-                <div className="handwritten text-[40px] absolute top-1 right-10 leading-none text-[#323d41]">01</div>
+                <div className="handwritten text-[40px] absolute top-1 right-10 leading-none text-[#323d41]">{data.chapter}</div>
                 <div className="h-24">
                     <img
-                        src={"/celeb/abhishek-bachchan.png"}
+                        src={data.image}
                         alt="header-pattern"
                         className='h-full object-contain'
                     />

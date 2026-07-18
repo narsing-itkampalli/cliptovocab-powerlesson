@@ -1,0 +1,192 @@
+{
+  "header": {
+    "chapter": "01",
+    "image": "/celeb/abhishek-bachchan.png"
+  },
+  "transcript": [
+    {
+      "speaker": "Abhishek",
+      "transcript": {
+        "text": "I did it my way and I did it on my own volition",
+        "highlight": [{ "text": "volition" }]
+      },
+      "previousHighlight": 0
+    },
+    {
+      "speaker": "Host",
+      "transcript": {
+        "text": "Facetious, you're too facetious?",
+        "highlight": [{ "text": "Facetious" }]
+      },
+      "previousHighlight": 1
+    },
+    {
+      "speaker": "Abhishek",
+      "transcript": {
+        "text": "Although estranged and now divorced, the first person he wants to go to...",
+        "highlight": [{ "text": "estranged" }]
+      },
+      "previousHighlight": 2
+    },
+    {
+      "speaker": "Abhishek",
+      "transcript": {
+        "text": "I think sometimes we get very skewed culturally.",
+        "highlight": [{ "text": "skewed" }]
+      },
+      "previousHighlight": 3
+    },
+    {
+      "speaker": "Abhishek",
+      "transcript": {
+        "text": "The most daunting thing to go on a red carpet for me.",
+        "highlight": [{ "text": "daunting" }]
+      },
+      "previousHighlight": 4
+    },
+    {
+      "speaker": "Abhishek",
+      "transcript": {
+        "text": "And I never butted heads with her after that.",
+        "highlight": [{ "text": "butted heads" }]
+      },
+      "previousHighlight": 5
+    },
+    {
+      "speaker": "Host",
+      "transcript": {
+        "text": "I've seen, uh, girls in villages say that they have curbed child marriage because of sports.",
+        "highlight": [{ "text": "curbed" }]
+      },
+      "previousHighlight": 6
+    },
+    {
+      "speaker": "Host",
+      "transcript": {
+        "text": "And those were movies that had very closed off, and kind of aggressive men.",
+        "highlight": [{ "text": "closed off" }]
+      },
+      "previousHighlight": 7
+    }
+  ],
+  "visualMemory": [
+    {
+      "word": "butted heads",
+      "meaning": "Strong disagreement or constant arguing.",
+      "image": "./visual-guide-aids/butted_heads.png",
+      "color": "#885022"
+    },
+    {
+      "word": "Closed Off",
+      "meaning": "Emotionally shut down; not open or aproachable.",
+      "image": "./visual-guide-aids/closed_off.png",
+      "color": "#082831"
+    },
+    {
+      "word": "Skewed",
+      "meaning": "Biased, unbalanced, or one-sided.",
+      "image": "./visual-guide-aids/skewed.png",
+      "color": "#011d36"
+    }
+  ],
+  "vocabulary": [
+    {
+      "word": "Volition",
+      "pos": "noun",
+      "pronunciation": "vo-LI-shun",
+      "definition": "Ability to make your own decisions and act on them without being forced.",
+      "example": "She left the company of her own volition, not because she was fired.",
+      "image": "/word-img/volition.png"
+    },
+    {
+      "word": "Facetious",
+      "pos": "adjective",
+      "pronunciation": "fuh-SEE-shus",
+      "definition": "Treating a serious subject in a humorous or joking way.",
+      "example": "Stop being facetious; this is a very serious meeting.",
+      "image": "/word-img/facetious.png"
+    },
+    {
+      "word": "Estranged",
+      "pos": "adjective",
+      "pronunciation": "es-TRAYNJd",
+      "definition": "No longer close or connected to someone you were once close to.",
+      "example": "He hasn't spoken to his estranged father in years.",
+      "image": "/word-img/estranged.png"
+    },
+    {
+      "word": "Skewed",
+      "pos": "adjective",
+      "pronunciation": "skewd",
+      "definition": "Not balanced or fair; showing only one side of something.",
+      "example": "The survey results were skewed because they only asked teenagers.",
+      "image": "/word-img/skewed.png"
+    },
+    {
+      "word": "Daunting",
+      "pos": "adjective",
+      "pronunciation": "DAWN-ting",
+      "definition": "Seeming difficult enough to make you feel nervous or less confident.",
+      "example": "Moving to a new country can be a daunting prospect.",
+      "image": "/word-img/daunting.png"
+    },
+    {
+      "word": "Butted heads",
+      "pos": "idiom",
+      "pronunciation": "bu-tid heads",
+      "definition": "Argued or disagreed strongly with someone.",
+      "example": "The marketing manager and the sales director always butt heads over the budget.",
+      "image": "/word-img/butted_heads.png"
+    },
+    {
+      "word": "Curbed",
+      "pos": "verb",
+      "pronunciation": "kurbd",
+      "definition": "Kept under control or prevented from becoming worse.",
+      "example": "You need to curb your spending if you want to save for a house.",
+      "image": "/word-img/curbed.png"
+    },
+    {
+      "word": "Closed off",
+      "pos": "phrasal verb",
+      "pronunciation": "klozd off",
+      "definition": "Unwilling to share feelings, thoughts, or personal experiences.",
+      "example": "After the accident, he became very closed off to his friends.",
+      "image": "/word-img/closed_off.png"
+    }
+  ],
+  "culturalNotes": [
+    {
+      "heading": "\"Of my own volition\" vs. \"My choice\"",
+      "subtext": "\"Volition\" is highly formal and emphasizes independent decision-making, not just preference.",
+      "image": "/notes/1.png"
+    },
+    {
+      "heading": "The Danger of Being \"Facetious\"",
+      "subtext": "Being called as funny is a compliment, but being called \"facetious\" is usually a criticism. It implies you are making jokes at the wrong time.",
+      "image": "/notes/2.png"
+    },
+    {
+      "heading": "Visualizing \"Butting Heads\"",
+      "subtext": "This idiom comes from the literal image of two animals (like rams or goats) crashing their horns together. It perfectly shows two people refusing to back down.",
+      "image": "/notes/3.png"
+    }
+  ],
+  "pronunciationGuide": [
+    {
+      "sentence": "On my own volition",
+      "pronunciation": "on-my-own voh-li-shun",
+      "guide": "Notice how the stress is on 'voh' and the 'li' is light."
+    },
+    {
+      "sentence": "You're too facetious",
+      "pronunciation": "you're-too fuh-see-shus",
+      "guide": "The 'a' and 'e' blend into a soft 'uh' and 'ee' sound."
+    },
+    {
+      "sentence": "Closed off",
+      "pronunciation": "clo-zdofff",
+      "guide": "The 'd' in closed links directly into the 'o' of off."
+    }
+  ]
+}

@@ -1,7 +1,18 @@
 import Eye from '../icons/Eye'
 import { transparentize } from '../utils/color'
 
-const VisualMemoryHelper = () => {
+type VisualMemoryItemData = {
+    word: string;
+    meaning: string;
+    image: string;
+    color: string;
+};
+
+type VisualMemoryHelperProps = {
+    data: VisualMemoryItemData[];
+};
+
+const VisualMemoryHelper = ({ data }: VisualMemoryHelperProps) => {
     return (
         <div className='border border-[#037ACA] border-dashed rounded-2xl'>
             <div className="px-4">
@@ -26,24 +37,12 @@ const VisualMemoryHelper = () => {
                 </div>
             </div>
             <div className="py-3 px-2 grid gap-2">
-                <VisualMemoryItem
-                    word="butted heads"
-                    meaning="Strong disagreement or constant arguing."
-                    image="./visual-guide-aids/butted_heads.png"
-                    color="#885022"
-                />
-                <VisualMemoryItem
-                    word="Closed Off"
-                    meaning="Emotionally shut down; not open or aproachable."
-                    image="./visual-guide-aids/closed_off.png"
-                    color="#082831"
-                />
-                <VisualMemoryItem
-                    word="Skewed"
-                    meaning="Biased, unbalanced, or one-sided."
-                    image="./visual-guide-aids/skewed.png"
-                    color="#011d36"
-                />
+                {data.map((item, index) => (
+                    <VisualMemoryItem
+                        key={index}
+                        {...item}
+                    />
+                ))}
             </div>
         </div>
     )

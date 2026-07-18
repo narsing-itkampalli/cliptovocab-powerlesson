@@ -2,7 +2,25 @@ import React from 'react'
 import ScrollText from '../icons/ScrollText';
 import Arrow from '../icons/Arrow';
 
-const Transcript = () => {
+type Highlight = {
+    text: string;
+    occurrence?: number;
+};
+
+type TranscriptItemData = {
+    speaker: string;
+    transcript: {
+        text: string;
+        highlight: Highlight[];
+    };
+    previousHighlight: number;
+};
+
+type TranscriptProps = {
+    data: TranscriptItemData[];
+};
+
+const Transcript = ({ data }: TranscriptProps) => {
     return (
         <div className="py-6 px-8 text-black relative z-10">
             <div
@@ -37,70 +55,14 @@ const Transcript = () => {
                     <table className="text-xl">
                         {/* List of Transcripts */}
                         <tbody>
-                            <TranscriptItem
-                                speaker='Abhishek'
-                                transcript={{
-                                    text: 'I did it my way and I did it on my own volition',
-                                    highlight: [{ text: 'volition' }]
-                                }}
-                                previousHighlight={0}
-                            />
-                            <TranscriptItem
-                                speaker='Host'
-                                transcript={{
-                                    text: "Facetious, you're too facetious?",
-                                    highlight: [{ text: 'Facetious' }]
-                                }}
-                                previousHighlight={1}
-                            />
-                            <TranscriptItem
-                                speaker='Abhishek'
-                                transcript={{
-                                    text: "Although estranged and now divorced, the first person he wants to go to...",
-                                    highlight: [{ text: 'estranged' }]
-                                }}
-                                previousHighlight={2}
-                            />
-                            <TranscriptItem
-                                speaker='Abhishek'
-                                transcript={{
-                                    text: "I think sometimes we get very skewed culturally.",
-                                    highlight: [{ text: 'skewed' }]
-                                }}
-                                previousHighlight={3}
-                            />
-                            <TranscriptItem
-                                speaker='Abhishek'
-                                transcript={{
-                                    text: "The most daunting thing to go on a red carpet for me.",
-                                    highlight: [{ text: 'daunting' }]
-                                }}
-                                previousHighlight={4}
-                            />
-                            <TranscriptItem
-                                speaker='Abhishek'
-                                transcript={{
-                                    text: "And I never butted heads with her after that.",
-                                    highlight: [{ text: 'butted heads' }]
-                                }}
-                                previousHighlight={5}
-                            />
-                            <TranscriptItem
-                                speaker='Host'
-                                transcript={{
-                                    text: "I've seen, uh, girls in villages say that they have curbed child marriage because of sports.",
-                                    highlight: [{ text: 'curbed' }]
-                                }}
-                                previousHighlight={6}
-                            />
-                            <TranscriptItem
-                                speaker='Host'
-                                transcript={{
-                                    text: "And those were movies that had very closed off, and kind of aggressive men.",
-                                    highlight: [{ text: 'closed off' }]
-                                }}
-                                previousHighlight={7}
-                            />
+                            {data.map((item, index) => (
+                                <TranscriptItem
+                                    key={index}
+                                    speaker={item.speaker}
+                                    transcript={item.transcript}
+                                    previousHighlight={item.previousHighlight}
+                                />
+                            ))}
                         </tbody>
                     </table>
                 </div>
@@ -115,10 +77,7 @@ const Transcript = () => {
     )
 }
 
-type Highlight = {
-    text: string;
-    occurrence?: number; // default: 0
-};
+
 
 type Props = {
     speaker: string;
