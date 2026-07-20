@@ -98,9 +98,9 @@ const VocabularyListItem = ({ index, word, pos, pronunciation, definition, examp
                 </div>
             </div>
             <div className="">
-                <div className="">
+                <div className="mt-3">
                     <h2 className='capitalize font-[inter] text-[#037ACA] font-bold text-2xl'>{word}</h2>
-                    <div className="flex gap-2 items-center mt-2">
+                    <div className="flex gap-2 items-center mt-1">
                         <div className='text-sm font-medium'>({pos})</div>
                         <div className="flex gap-1 text-xs items-center rounded-full px-1 py-0.5 border border-[#037ACA]/30 font-medium">
                             <VolumeFilled className='size-3.5 flex-none' />
@@ -108,12 +108,12 @@ const VocabularyListItem = ({ index, word, pos, pronunciation, definition, examp
                         </div>
                     </div>
                 </div>
-                <div className="mt-3 leading-[130%]">
+                <div className="mt-3 leading-[130%] text-base">
                     {definition}
                 </div>
-                <div className="mt-5 leading-[130%] flex flex-col">
-                    <span className="text-sm font-semibold text-[#037ACA]">Example:</span>{" "}
-                    <span className='italic text-sm'>
+                <div className="mt-5 leading-[130%]">
+                    <span className="text-base font-semibold text-[#037ACA]">Example:</span>{" "}
+                    <span className='italic text-base'>
                         "{example}"
                     </span>
                 </div>
