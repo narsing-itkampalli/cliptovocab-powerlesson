@@ -32,14 +32,19 @@ const Header = ({ data }: HeaderProps) => {
                     </h1>
                 </div>
             </div>
-            <div className='w-fit mt-auto relative pr-12'>
-                <div className="handwritten text-[40px] absolute top-1 right-10 leading-none text-[#323d41]">{data.chapter}</div>
+            <div className='w-fit mt-auto relative pr-32'>
                 <div className="h-24">
                     <img
                         src={data.image}
                         alt="header-pattern"
                         className='h-full object-contain'
                     />
+                </div>
+                <div className="absolute top-1 right-0 w-30">
+                    <div className="handwritten text-4xl leading-none text-[#037ACA]">
+                        {data.chapter}
+                    </div>
+                    <div className="font-bold leading-none mt-2 text-[#323d41]">Abhishek Bachchan</div>
                 </div>
             </div>
         </div>
