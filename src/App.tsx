@@ -11,7 +11,9 @@ function App() {
     const [data, setData] = useState<any>(null);
 
     useEffect(() => {
-        fetch("/data.json")
+        const number = new URLSearchParams(location.search).get("n") || "1";
+
+        fetch(`/data/${number}.json`)
             .then(res => res.json())
             .then(setData)
             .catch(console.error);
@@ -41,11 +43,17 @@ function App() {
                     />
                     <div className="relative">
                         <div className="grid grid-cols-2 gap-4">
-                            <VisualMemoryHelper data={data.visualMemory} />
-                            <PronunciationGuide data={data.pronunciationGuide} />
+                            {data.visualMemory && (
+                                <VisualMemoryHelper data={data.visualMemory} />
+                            )}
+                            {data.pronunciationGuide && (
+                                <PronunciationGuide data={data.pronunciationGuide} />
+                            )}
                         </div>
                         <div className="pt-4">
-                            <CulturalNotes data={data.culturalNotes} />
+                            {data.culturalNotes && (
+                                <CulturalNotes data={data.culturalNotes} />
+                            )}
                         </div>
                     </div>
                 </div>

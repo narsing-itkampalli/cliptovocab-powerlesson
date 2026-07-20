@@ -21,6 +21,8 @@ type TranscriptProps = {
 };
 
 const Transcript = ({ data }: TranscriptProps) => {
+    let previousHighlight = 0;
+
     return (
         <div className="py-6 px-8 text-black relative z-10">
             <div
@@ -55,14 +57,20 @@ const Transcript = ({ data }: TranscriptProps) => {
                     <table className="text-xl">
                         {/* List of Transcripts */}
                         <tbody>
-                            {data.map((item, index) => (
-                                <TranscriptItem
-                                    key={index}
-                                    speaker={item.speaker}
-                                    transcript={item.transcript}
-                                    previousHighlight={item.previousHighlight}
-                                />
-                            ))}
+                            {data.map((item, index) => {
+                                if(index > 0) {
+                                    previousHighlight += data[index-1].transcript.highlight.length;
+                                }
+
+                                return (
+                                    <TranscriptItem
+                                        key={index}
+                                        speaker={item.speaker}
+                                        transcript={item.transcript}
+                                        previousHighlight={previousHighlight}
+                                    />
+                                )
+                            })}
                         </tbody>
                     </table>
                 </div>
