@@ -46,3 +46,27 @@ body::before {
 .handwritten {
   font-family: "Aesthetic Violet", cursive;
 }
+
+/* Print styles — footer at the bottom of the last page */
+@media print {
+  @page {
+    size: legal portrait;
+    margin: 0.5in;
+  }
+
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+
+  /* Make the app root a flex column that fills the entire print area */
+  #root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .print-footer {
+    margin-top: auto; /* pushes footer to the bottom of the last page */
+  }
+}

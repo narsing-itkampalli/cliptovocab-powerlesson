@@ -5,6 +5,7 @@ import PronunciationGuide from "./components/PronunciationGuide"
 import Transcript from "./components/Transcript"
 import VisualMemoryHelper from "./components/VisualMemoryHelper"
 import VocabularyList from "./components/VocabularyList"
+import Footer from "./components/Footer"
 
 
 function App() {
@@ -57,6 +58,9 @@ function App() {
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className="mt-auto print-footer">
+                <Footer />
             </div>
         </div>
     )
