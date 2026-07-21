@@ -67,6 +67,7 @@ function App() {
                     </div>
                 </div>
             </div>
+            <div className="hidden print:block col-span-3 break-after-page"></div>
             {data.quiz && (
                 <Quiz data={data.quiz} />
             )}
