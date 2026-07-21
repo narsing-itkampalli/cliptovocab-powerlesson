@@ -143,5 +143,67 @@
       "subtext": "This idiom comes from the literal image of two animals (like rams or goats) crashing their horns together. It perfectly shows two people refusing to back down.",
       "image": "/notes/3.png"
     }
+  ],
+  "quiz": [
+    {
+      "question": "Which word means treating a serious subject in a humorous or joking way?",
+      "options": ["Daunting", "Facetious", "Estranged", "Curbed"],
+      "answer": "B"
+    },
+    {
+      "question": "She left the company of her own _______, not because she was fired.",
+      "options": ["Skewed", "Closed off", "Volition", "Facetious"],
+      "answer": "C"
+    },
+    {
+      "question": "Which word describes someone who is no longer close to a person they were once connected to?",
+      "options": ["Curbed", "Estranged", "Daunting", "Skewed"],
+      "answer": "B"
+    },
+    {
+      "question": "The marketing manager and the sales director always _______ over the budget.",
+      "options": ["Curbed", "Closed off", "Skewed", "Butted heads"],
+      "answer": "D"
+    },
+    {
+      "question": "Which word means not balanced or fair, showing only one side of something?",
+      "options": ["Facetious", "Volition", "Skewed", "Estranged"],
+      "answer": "C"
+    },
+    {
+      "question": "Moving to a new country can be a _______ prospect.",
+      "options": ["Daunting", "Facetious", "Curbed", "Closed off"],
+      "answer": "A"
+    },
+    {
+      "question": "Which phrase describes someone unwilling to share feelings or personal experiences?",
+      "options": ["Butted heads", "Estranged", "Closed off", "Volition"],
+      "answer": "C"
+    },
+    {
+      "question": "You need to _______ your spending if you want to save for a house.",
+      "options": ["Skewed", "Curb", "Daunt", "Butt heads"],
+      "answer": "B"
+    },
+    {
+      "question": "Which word means seeming difficult enough to make you feel nervous or less confident?",
+      "options": ["Estranged", "Facetious", "Closed off", "Daunting"],
+      "answer": "D"
+    },
+    {
+      "question": "Stop being _______; this is a very serious meeting.",
+      "options": ["Daunting", "Estranged", "Facetious", "Skewed"],
+      "answer": "C"
+    },
+    {
+      "question": "Which idiom means to argue or disagree strongly with someone?",
+      "options": ["Closed off", "Curbed", "Volition", "Butted heads"],
+      "answer": "D"
+    },
+    {
+      "question": "The survey results were _______ because they only asked teenagers.",
+      "options": ["Curbed", "Skewed", "Daunting", "Volition"],
+      "answer": "B"
+    }
   ]
 }

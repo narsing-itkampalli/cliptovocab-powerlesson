@@ -6,6 +6,7 @@ import Transcript from "./components/Transcript"
 import VisualMemoryHelper from "./components/VisualMemoryHelper"
 import VocabularyList from "./components/VocabularyList"
 import Footer from "./components/Footer"
+import Quiz from "./components/Quiz"
 
 
 function App() {
@@ -59,6 +60,9 @@ function App() {
                     </div>
                 </div>
             </div>
+            {data.quiz && (
+                <Quiz data={data.quiz} />
+            )}
             <div className="mt-auto print-footer">
                 <Footer />
             </div>
