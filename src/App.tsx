@@ -8,6 +8,8 @@ import VocabularyList from "./components/VocabularyList"
 import Footer from "./components/Footer"
 import Quiz from "./components/Quiz"
 
+import CommonMistakes from "./components/CommonMistakes"
+
 
 function App() {
     const [data, setData] = useState<any>(null);
@@ -55,6 +57,11 @@ function App() {
                         <div className="pt-4">
                             {data.culturalNotes && (
                                 <CulturalNotes data={data.culturalNotes} />
+                            )}
+                        </div>
+                        <div className="pt-4">
+                            {data.commonMistakes && (
+                                <CommonMistakes data={data.commonMistakes} />
                             )}
                         </div>
                     </div>

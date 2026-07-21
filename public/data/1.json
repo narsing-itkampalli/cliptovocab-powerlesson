@@ -144,6 +144,36 @@
       "image": "/notes/3.png"
     }
   ],
+  "commonMistakes": [
+    {
+      "incorrect": "He did it on his own violation.",
+      "incorrectHighlight": ["on", "violation"],
+      "correct": "He did it of his own volition.",
+      "correctHighlight": ["of", "volition"],
+      "explanation": "\"Volition\" is confused with \"violation.\" Use \"of,\" not \"on.\""
+    },
+    {
+      "incorrect": "Don't be so facetious, you're really funny!",
+      "incorrectHighlight": ["you're really funny"],
+      "correct": "Don't be so facetious — this is serious.",
+      "correctHighlight": ["this is serious"],
+      "explanation": "\"Facetious\" is a criticism, not a compliment."
+    },
+    {
+      "incorrect": "I butted head with my boss.",
+      "incorrectHighlight": ["head"],
+      "correct": "I butted heads with my boss.",
+      "correctHighlight": ["heads"],
+      "explanation": "Always plural — \"heads,\" never \"head.\""
+    },
+    {
+      "incorrect": "The government curbed on illegal activities.",
+      "incorrectHighlight": ["curbed on"],
+      "correct": "The government curbed illegal activities.",
+      "correctHighlight": ["curbed"],
+      "explanation": "\"Curb\" takes a direct object — no preposition needed."
+    }
+  ],
   "quiz": [
     {
       "question": "Which word means treating a serious subject in a humorous or joking way?",
