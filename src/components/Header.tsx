@@ -35,7 +35,7 @@ const Header = ({ data }: HeaderProps) => {
             <div className='w-fit mt-auto relative pr-32'>
                 <div className="h-24">
                     <img
-                        src={data.image}
+                        src={`/db/celeb/${data.image}`}
                         alt="header-pattern"
                         className='h-full object-contain'
                     />

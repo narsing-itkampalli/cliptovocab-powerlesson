@@ -2,7 +2,7 @@
 
 import InstagramIcon from "../icons/InstagramIcon"
 
-const Footer = () => {
+const Footer = ({ links }: { links: { instagram: { label: string; url: string }; linfio: { label: string; url: string } } }) => {
     return (
         <div className='w-full flex items-center justify-center mt-12 mb-10 px-4'>
             <div
@@ -14,7 +14,7 @@ const Footer = () => {
 
                 {/* Left Side - Instagram */}
                 <a
-                    href="https://instagram.com/reel/DasskdAztLb"
+                    href={links.instagram.url}
                     target="_blank"
                     rel="noreferrer"
                     className='flex items-center gap-4 group cursor-pointer no-underline'
@@ -33,7 +33,7 @@ const Footer = () => {
                             className='text-[13px] text-gray-400 group-hover:text-blue-300 transition-colors mt-0.5'
                             style={{ fontFamily: 'Inter, sans-serif' }}
                         >
-                            instagram.com/reel/DasskdAztLB
+                            {links.instagram.label}
                         </span>
                     </div>
                 </a>
@@ -43,7 +43,7 @@ const Footer = () => {
 
                 {/* Right Side - Linfio */}
                 <a
-                    href="https://linfio.com/share/Sg9yU0W1SL"
+                    href={links.linfio.url}
                     target="_blank"
                     rel="noreferrer"
                     className='flex items-center gap-4 group cursor-pointer no-underline'
@@ -63,7 +63,7 @@ const Footer = () => {
                             className='text-[13px] text-gray-400 group-hover:text-blue-300 transition-colors mt-0.5'
                             style={{ fontFamily: 'Inter, sans-serif' }}
                         >
-                            linfio.com/share/Sg9yU0W1SL
+                            {links.linfio.label}
                         </span>
                     </div>
                 </a>

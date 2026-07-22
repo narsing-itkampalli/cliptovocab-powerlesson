@@ -17,7 +17,7 @@ function App() {
     useEffect(() => {
         const number = new URLSearchParams(location.search).get("n") || "1";
 
-        fetch(`/data/${number}.json`)
+        fetch(`/db/data/${number}.json`)
             .then(res => res.json())
             .then(setData)
             .catch(console.error);
@@ -72,7 +72,7 @@ function App() {
                 <Quiz data={data.quiz} />
             )}
             <div className="mt-auto print-footer">
-                <Footer />
+                <Footer links={data.links} />
             </div>
         </div>
     )

@@ -82,6 +82,8 @@ type VocabularyListItemProps = {
 }
 
 const VocabularyListItem = ({ index, word, pos, pronunciation, definition, example, image }: VocabularyListItemProps) => {
+    const number = new URLSearchParams(location.search).get("n") || "1";
+
     return (
         <div className="bg-white px-4 pb-4 pt-2 flex flex-col items-center shadow-md rounded-2xl border-2 border-[#037ACA]/60">
             <div className="w-full flex relative">
@@ -94,7 +96,7 @@ const VocabularyListItem = ({ index, word, pos, pronunciation, definition, examp
                     <img src={image} alt={word} className='w-full h-auto object-contain' />
                 </div> */}
                 <div className="h-32 flex justify-center items-center rounded-full mt-1 mx-auto">
-                    <img src={image} alt={word} className='w-auto h-full object-contain' />
+                    <img src={`/db/visuals/${number}/vocab/${image}`} alt={word} className='w-auto h-full object-contain' />
                 </div>
             </div>
             <div className="">
