@@ -26,7 +26,7 @@ const Transcript = ({ data }: TranscriptProps) => {
     return (
         <div className="py-6 px-8 text-black relative z-10">
             <div
-                className="px-8 border-[#a7a7a7] rounded-2xl overflow-hidden py-6 flex flex-col items-center relative"
+                className="px-8 border-[#a7a7a7] rounded-2xl overflow-hidden py-6 flex flex-col relative"
             >
                 <div
                     className="absolute inset-0 z-0 opacity-40"

@@ -55,7 +55,7 @@ const VocabularyList = ({ data }: VocabularyListProps) => {
                             />
                         ))}
                     </div>
-                    <div className="hidden print:block col-span-3 break-after-page"></div>
+                    {/* <div className="hidden print:block col-span-3 break-after-page"></div> */}
                     <div className="grid grid-cols-3 gap-3 pt-5">
                         {data.slice(6).map((item, index) => (
                             <VocabularyListItem

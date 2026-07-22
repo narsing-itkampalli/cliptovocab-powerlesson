@@ -4,6 +4,7 @@ type HeaderProps = {
     data: {
         chapter: string;
         image: string;
+        name: string;
     };
 };
 
@@ -44,7 +45,7 @@ const Header = ({ data }: HeaderProps) => {
                     <div className="handwritten text-4xl leading-none text-[#037ACA]">
                         {data.chapter}
                     </div>
-                    <div className="font-bold leading-none mt-2 text-[#323d41]">Abhishek Bachchan</div>
+                    <div className="font-bold leading-none mt-2 text-[#323d41]">{data.name}</div>
                 </div>
             </div>
         </div>
