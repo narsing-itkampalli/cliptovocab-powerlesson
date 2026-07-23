@@ -41,7 +41,7 @@ const Header = ({ data }: HeaderProps) => {
                         className='h-full object-contain'
                     />
                 </div>
-                <div className="absolute top-1 right-0 w-30">
+                <div className="absolute top-1 right-0 w-30 pr-10">
                     <div className="handwritten text-4xl leading-none text-[#037ACA]">
                         {data.chapter}
                     </div>
